@@ -1,0 +1,1098 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #000000	;
+    color: #333;
+    line-height: 1.6;
+	 font-family: 'Oswald', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo negro para contraste con el texto blanco */
+            color: white;           /* Color de texto blanco */
+        
+    padding-top: 75px; /* Este valor debe ser igual a la altura del header */
+}
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 700;
+        }
+
+        /* Estilos del slider */
+        .slider-container {
+            position: relative;
+            max-width: 22%;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Botones de navegación */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s;
+    z-index: 1; /* Asegúrate de que estén por encima de las imágenes */
+}
+
+/* Ajustamos los botones para que estén cerca de los bordes del slider */
+.prev {
+    left: 10px; /* Ajusta la posición desde el borde izquierdo */
+}
+
+.next {
+    right: 10px; /* Ajusta la posición desde el borde derecho */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+	
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 45%; /* Cada slider ocupa el 45% del ancho del contenedor */
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+        /* Estilos para el footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+	
+}
+
+
+/* Estilos del Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#252525;
+    color: white;
+    padding: 15px 20px;
+}
+.foto-principal {
+	width: 80%; 
+	height: auto;
+	max-width: 200px
+		
+	
+	
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Estilos del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #252525;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para dispositivos móviles (menú oculto) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Ocultar el menú por defecto en móviles */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #252525;
+       
+        top: 60px; /* Ajustar debajo del header */
+        left: 0;
+        right: 0;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    /* Mostrar el botón del menú hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Mostrar el menú cuando esté activo */
+    nav.active ul {
+        display: flex;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de la Página de Inicio */
+.inicio{
+	font-size: 30px;
+	display: flex;
+    justify-content: center;
+    align-items: center;	
+}
+
+
+.hero {
+	
+    text-align: center;
+    padding: 20px 1px;
+    background-color: #000000;
+    color: white;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.ultimos-shows, .discografia {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.ultimos-shows {background-color: #583B93}
+.discografia{background-color: #000000}
+.ultimos-shows h2, .discografia h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.ultimos-shows ul, .discografia ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ultimos-shows ul li, .discografia ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+	
+}
+
+/* Estilos para las imágenes específicas */
+.mood img,
+.vorterix img,
+.opera-plata img {
+    width: 150px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Mantén la proporción de la imagen */
+    display: block; /* Asegura que se comporten como bloques */
+    margin: 0 auto; /* Centra las imágenes */
+    border-radius: 5px; /* Añade esquinas redondeadas si lo deseas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra si lo deseas */
+}
+
+/* Estilos específicos adicionales para cada clase si es necesario */
+.mood img {
+    width: 120px; /* Cambia el tamaño para la clase mood */
+}
+
+.vorterix img {
+    width: 120px; /* Cambia el tamaño para la clase vorterix */
+}
+
+.opera-plata img {
+    width: 120px; /* Cambia el tamaño para la clase opera-plata */
+}
+/* Estilos de la Discografía */
+.discografia {
+    background-color: #000000;
+    padding: 40px 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.discografia h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: white;
+}
+
+/* Galería de álbumes */
+.albumes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en la primera fila */
+    gap: 20px; /* Espacio entre álbumes */
+    padding: 20px 0;
+}
+
+.album {
+    background-color: #583B93;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.album p {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Segunda fila con 3 columnas (7 álbumes en total) */
+.albumes .album:nth-child(8), 
+.albumes .album:nth-child(9), 
+.albumes .album:nth-child(10) {
+    grid-column: span 1;
+}
+
+/* Adaptación a pantallas más pequeñas */
+@media (max-width: 768px) {
+    .albumes {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .albumes {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}
+/* Estilos de la Galería */
+.galeria {
+    padding: 40px 20px;
+    text-align: center;
+	color: white
+}
+
+.galeria h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.division {
+    margin-bottom: 30px;
+}
+
+.division h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.division img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos de los Próximos Shows */
+.shows {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.shows h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.shows ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shows ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.shows ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.shows ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de la Historia */
+.historia {
+    padding: 40px 20px;
+    text-align: center;
+	background-color: #000000;
+}
+
+.historia h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+	background-color: #000000;
+	color: white;
+
+}
+
+.historia-seccion {
+    margin-bottom: 30px;
+}
+
+.historia-seccion h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+	background-color: #000000;
+}
+
+.historia-seccion p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Estilos de Contacto */
+.contacto {
+    padding: 40px 20px;
+    text-align: center;
+	color: white
+}
+
+.contacto h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contacto form input, .contacto form textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contacto form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto form button:hover {
+    background-color: #0056b3;
+}
+/* Estilos para centrar los iconos de redes sociales */
+.social-icons {
+	text-decoration: none;
+    display: flex;              /* Usar flexbox para alinear los íconos */
+    justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Alinear verticalmente */
+    gap: 20px;                   /* Espacio entre los íconos */
+    padding: 10px 0;             /* Reducir padding superior/inferior */
+    background-color: #583B93;   /* Fondo para que contraste si es necesario */
+}
+
+/* Opcional: ajustar el tamaño de los iconos */
+.social-icons a img {
+    width: 40px;                 /* Ajustar tamaño del ícono */
+    height: auto;
+}
+
+/* Opcional: estilo adicional para el footer */
+footer {
+    text-align: center;           /* Centrar el texto del footer */
+    padding: 1px 0;              /* Reducir padding para que sea más compacto */
+    background-color: #583B93;    /* Coincidir con el fondo de los íconos */
+    color: #583B93;                  /* Color del texto */
+    font-size: 14px;
+
+    position: relative; /* O puedes eliminar completamente esta línea */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #583B93;
+    color: white;
+    font-size: 14px;
+}          /* Tamaño del texto más pequeño pero legible */
+
+
+/* Estilos para centrar los iconos de redes sociales */
+.social-icons {
+    display: flex;               /* Usar flexbox para alinear los íconos */
+    justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Alinear verticalmente */
+    gap: 15px;                   /* Reducir el espacio entre los íconos */
+    padding: 5px 0;              /* Reducir el padding superior/inferior para compactar */
+}
+
+/* Ajustar tamaño de los iconos */
+.social-icons a img {
+    width: 35px;                 /* Ajustar ligeramente el tamaño del ícono */
+    height: auto;
+}
+.historia-eruca h3 {
+    font-size: 30px;  /* Ajusta el tamaño de la fuente */
+	color: white;
+}
+
+.historia-eruca p {
+    font-size: 14px;  /* También puedes ajustar el texto del párrafo */
+	color: white;
+}
+
+
+.historia-lula h3 {
+    font-size: 30px;  /* Ajusta el tamaño de la fuente */
+	color: white;
+	
+}
+
+.historia-lula p {
+    font-size: 14px;  /* También puedes ajustar el texto del párrafo */
+	color: white;
+}
+
+.historia-brenda h3 {
+    font-size: 30px;  /* Ajusta el tamaño de la fuente */
+	color: white;
+}
+
+.historia-brenda p {
+    font-size: 14px;  /* También puedes ajustar el texto del párrafo */
+	color: white;
+}
+
+.historia-gabi h3 {
+    font-size: 30px;  /* Ajusta el tamaño de la fuente */
+	color: white;
+}
+
+.historia-gabi p {
+    font-size: 14px;  /* También puedes ajustar el texto del párrafo */
+	color: white;
+}
+/* Ajustar el tamaño de las flechas prev y next en dispositivos móviles */
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 18px; /* Disminuir el tamaño del texto/flecha */
+        padding: 5px;    /* Reducir el padding para hacer los botones más pequeños */
+    }
+}
+
+@media (max-width: 480px) {
+    .prev, .next {
+        font-size: 14px; /* Aún más pequeño en pantallas muy pequeñas como móviles */
+        padding: 3px;    /* Reducir aún más el padding */
+    }
+}
+/* Centrar el contenido de la galería */
+.galeria {
+    text-align: center;
+}
+
+/* Ajustar el contenedor de las filas */
+.row {
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center;
+    flex-wrap: wrap; /* Para que se ajusten automáticamente en pantallas pequeñas */
+    gap: 20px; /* Espacio entre los sliders */
+}
+
+/* Ajustar el tamaño del slider para que sea proporcional y centrado */
+.slider-container {
+    width: 300px; /* Tamaño fijo para que todos los sliders tengan el mismo ancho */
+    max-width: 100%;
+    margin: 0 auto; /* Centrar el slider */
+    position: relative;
+}
+
+.slider-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ajustes para pantallas más pequeñas (tablets y móviles) */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 80%; /* Ocupa más espacio en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        width: 100%; /* Ocupa todo el ancho en teléfonos móviles */
+    }
+}
+
+/* Ajustar el tamaño de las flechas en pantallas pequeñas */
+@media (max-width: 480px) {
+    .prev, .next {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+/* Estilos para el menú en computadoras */
+#nav-menu {
+    display: block; /* Mostrar el menú por defecto en pantallas grandes */
+}
+
+/* Ocultar el menú en móviles */
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none; /* Ocultar menú por defecto en móviles */
+    }
+
+    #nav-menu.active {
+        display: block; /* Mostrar menú cuando está activo en móviles */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón hamburguesa en móviles */
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #252525;
+        padding: 20px;
+    }
+}
+
+/* Ocultar el botón hamburguesa en computadoras */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Ocultar el botón hamburguesa en pantallas grandes */
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px; /* Asegurar que el menú se muestre correctamente en computadoras */
+    }
+}
+/* Estilos del menú en móviles */
+#nav-menu {
+    display: none; /* Ocultar el menú inicialmente */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #252525;
+    position: absolute;
+    top: 60px; /* Aseguramos que el menú aparezca justo debajo del header */
+    left: 0;
+    z-index: 9;
+}
+
+#nav-menu.active {
+    display: flex; /* Mostrar el menú cuando esté activo */
+    justify-content: center;
+}
+
+/* Ajustes para el header */
+header {
+    position: fixed; /* Hacer que el header se quede fijo */
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #252525;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Asegurarse de que el contenido no se superponga con el header */
+body {
+    padding-top: 75px; /* Añadir espacio para evitar que el contenido se oculte debajo del header fijo */
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 11;
+}
+
+/* Ocultar el botón hamburguesa en pantallas grandes */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}/* Estilos del Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #252525;
+    color: white;
+    padding: 15px 20px; /* Reducir el padding a 20px */
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 10px; /* Ajustar espacio a la izquierda del logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-right: 10px; /* Reducir espacio a la derecha del menú */
+}
+/* Estilos para el anuncio */
+.anuncio {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000000
+		; /* Fondo oscuro para el anuncio */
+    color: white;
+}
+
+.anuncio h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.anuncio-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Fondo para el contenedor del iframe */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.anuncio-contenedor iframe {
+    border: none; /* Eliminar bordes del iframe */
+    border-radius: 5px; /* Bordes redondeados del iframe */
+	width: 728px;
+	height: 90px
+	
+		
+}
+@media (max-width: 768px) {
+    .anuncio-iframe {
+        width: 300px;
+        height: 600px;
+    }
+}
+/* Estilos generales */
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Contenedor principal para la imagen y el anuncio */
+.main-content-special {
+    display: flex;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas más pequeñas */
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente el contenido */
+    margin: 20px 0;
+}
+
+/* Imagen principal ocupa el 70% del ancho */
+.main-image-special {
+    flex: 1 1 70%; /* Toma el 70% del ancho */
+    padding-right: 20px; /* Espacio entre la imagen y el anuncio */
+}
+
+/* Anuncio ocupa el 30% del ancho */
+.anuncio-special {
+    flex: 1 1 30%; /* Toma el 30% del ancho */
+    max-width: 300px; /* Limitar el ancho máximo del anuncio */
+}
+
+/* Ajustes a la imagen principal */
+.main-image-special img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    display: block;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .main-content-special {
+        flex-direction: column; /* Apila la imagen y el anuncio en pantallas pequeñas */
+    }
+
+    .main-image-special, .anuncio-special {
+        width: 100%; /* Cada uno ocupa el 100% del ancho */
+        padding-right: 0;
+    }
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo para el contenedor del slider */
+.slider-container-special {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Estilo para las imágenes del slider */
+.slider-special {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-special {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide-special img {
+    width: 100%;
+    height: auto;
+}
+
+/* Botones para navegar en el slider */
+.prev-special, .next-special {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev-special {
+    left: 10px;
+}
+
+.next-special {
+    right: 10px;
+}
+
+/* Botones de Redes Sociales */
+.social-buttons-special {
+    margin: 30px 0;
+}
+
+.social-buttons-special a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.youtube-button-special {
+    background-color: red;
+}
+
+.instagram-button-special {
+    background-color: #C13584;
+}
+
+.facebook-button-special {
+    background-color: #3b5998;
+}
+
+.social-buttons-special a:hover {
+    opacity: 0.8;
+}
+
+/* Media Queries para el anuncio */
+@media (max-width: 768px) {
+    .anuncio-iframe-special {
+        width: 300px;
+        height: 600px;
+    }
+}
+
+@media (min-width: 769px) {
+    .anuncio-iframe-special {
+        width: 728px;
+        height: 90px;
+    }
+}
+/* Contenedor principal para la imagen y el anuncio */
+.main-content-special {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre la imagen y el anuncio */
+    align-items: center; /* Centra verticalmente el contenido */
+    margin: 20px 0;
+    width: 100%; /* Asegura que el contenedor principal ocupe el 100% del ancho */
+}
+
+/* Caja contenedora para la imagen principal */
+.main-image-special {
+    width: 50%; /* La caja contenedora de la imagen ocupará el 50% del ancho total */
+    background-color: #333; /* Fondo de la caja contenedora (puedes cambiarlo) */
+    padding: 20px; /* Espacio interno alrededor de la imagen */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar la caja */
+    display: flex; /* Usamos flexbox para centrar la imagen dentro de la caja */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen principal centrada y ajustada */
+.main-image-special img {
+    max-width: 100%; /* La imagen ocupará el 100% del contenedor sin salir de los bordes */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+/* Anuncio ocupa el 50% del ancho */
+.anuncio-special {
+    width: 50%; /* El anuncio ocupará el 50% del ancho total */
+    max-width: 300px; /* Limitar el ancho máximo del anuncio */
+    padding-left: 20px; /* Separación entre la caja de imagen y el anuncio */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .main-content-special {
+        flex-direction: column; /* Apila la imagen y el anuncio en pantallas pequeñas */
+    }
+
+    .main-image-special, .anuncio-special {
+        width: 100%; /* En pantallas pequeñas, ambos ocupan el 100% del ancho */
+        padding: 0; /* Eliminar padding en pantallas pequeñas */
+    }
+}
+/* Header fijo */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #252525;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Ajusta el valor al tamaño de tu header */
+    background-color: #000;
+    color: white;
+}
