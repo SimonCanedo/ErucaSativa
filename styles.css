@@ -1,0 +1,260 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 75px; /* Espacio reservado para el header fijo */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #252525;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para dispositivos móviles (menú oculto) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #252525;
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* Secciones generales */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del anuncio */
+.anuncio {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+}
+
+.anuncio-iframe {
+    width: 728px;
+    height: 90px;
+    border: none;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .anuncio-iframe {
+        width: 300px;
+        height: 600px;
+    }
+}
+
+/* Galería */
+.galeria {
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.galeria h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.slider-container {
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #583B93;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.social-icons a img {
+    width: 35px;
+    height: auto;
+}
+
+/* Sección de próximos shows */
+.shows ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shows ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.shows ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.shows ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de historia */
+.historia {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000;
+}
+
+.historia h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: white;
+}
+
+.historia h3 {
+    font-size: 30px;
+    color: white;
+}
+
+.historia p {
+    font-size: 14px;
+    color: white;
+    line-height: 1.5;
+}
+
+/* Estilos de contacto */
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contacto form input, .contacto form textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contacto form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto form button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes adicionales de responsividad */
+@media (max-width: 768px) {
+    .shows ul, .historia, .contacto form {
+        padding: 20px;
+    }
+
+    .shows ul li, .historia h2, .historia h3, .historia p, .contacto form input, .contacto form textarea, .contacto form button {
+        font-size: 16px;
+    }
+}
