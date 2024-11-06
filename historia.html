@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eruca Sativa - Historia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="index.html">ERUCA SATIVA</a></div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="shows.html">Próximos Shows</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Historia de la Banda -->
+    <section class="historia">
+        <h2>Historia de la Banda</h2>
+        <div class="historia-eruca">
+            <h3>Eruca Sativa</h3>
+            <p>Eruca Sativa es una banda de rock argentino formada en 2007 en la ciudad de Córdoba por Lula Bertoldi (voz y guitarra), Brenda Martin (bajo y coros) y Gabriel Pedernera (batería y coros). Desde sus inicios, la banda se destacó por su sonido potente, que fusiona elementos de rock, funk, metal y grunge, así como por la energía y el carisma de sus integrantes.</p>
+            <p>El nombre de la banda proviene de la planta “rúcula sativa”, una elección que refleja su enfoque espontáneo y natural hacia la música. En 2008, lanzaron su álbum debut "La Carne", que fue bien recibido por la crítica y los llevó a ganar seguidores en la escena del rock independiente de Argentina. A partir de ahí, comenzaron a girar por todo el país y a consolidarse como una de las bandas más prometedoras del momento.</p>
+            <p>Con el paso de los años, Eruca Sativa lanzó varios discos, entre ellos "Es" (2010), "Blanco" (2012), "Huellas Digitales" (2014), y "Barro y Fauna" (2016), este último nominado a los premios Latin Grammy. La banda logró posicionarse en la escena del rock nacional, siendo reconocida tanto por su calidad musical como por su mensaje de igualdad y lucha social.</p>
+            <p>A lo largo de su carrera, Eruca Sativa ha colaborado con diversos artistas y ha tocado en festivales importantes, tanto en Argentina como en el extranjero. Su estilo musical versátil y la conexión entre sus integrantes les han permitido mantenerse vigentes en la industria y continuar evolucionando.</p>
+            <p>Eruca Sativa no solo ha sido influyente por su música, sino también por el compromiso de sus integrantes con causas sociales, especialmente en temas de equidad de género en el ámbito musical. Hoy en día, son considerados uno de los exponentes más importantes del rock contemporáneo en Argentina.</p>
+        </div>
+
+        <!-- Historia Individual de Cada Integrante -->
+        <div class="historia-individual">
+            <div class="historia-lula">
+                <h3>Lula Bertoldi</h3>
+                <p>Lula Bertoldi es una cantante, guitarrista y compositora argentina, nacida en Sunchales, provincia de Santa Fe, en 1985. Desde pequeña, mostró un gran interés por la música y aprendió a tocar la guitarra de forma autodidacta. A lo largo de su carrera, ha sido reconocida por su habilidad técnica con la guitarra y su potente voz.</p>
+                <p>Lula ha participado en colaboraciones con diversos artistas y ha sido una figura influyente en la lucha por la equidad de género en la industria musical. Ha inspirado a muchas jóvenes artistas y ha seguido desarrollando su carrera solista, explorando nuevos sonidos y géneros musicales.</p>
+            </div>
+            <div class="historia-brenda">
+                <h3>Brenda Martin</h3>
+                <p>Brenda Martin es una bajista y compositora argentina, nacida en Córdoba. Desde temprana edad, mostró interés por la música y comenzó a tocar el bajo, instrumento que la llevaría a destacarse en la escena del rock argentino. A lo largo de su carrera, ha sido reconocida por su gran técnica, versatilidad y presencia en el escenario.</p>
+                <p>Brenda ha trabajado con diferentes artistas y ha participado en diversos proyectos musicales. También ha sido una firme defensora de la equidad de género en la música, convirtiéndose en una referente para muchas mujeres que buscan abrirse camino en la industria. Su carrera sigue en constante evolución, siempre explorando nuevos estilos y colaboraciones artísticas.</p>
+            </div>
+            <div class="historia-gabi">
+                <h3>Gabriel Pedernera</h3>
+                <p>Gabriel Pedernera es un baterista, productor y compositor argentino, nacido en Córdoba. Desde joven mostró un profundo interés por la música, especialmente por la batería, instrumento que comenzó a tocar y que lo llevaría a convertirse en un músico destacado. A lo largo de su carrera, ha sido reconocido por su técnica precisa y su capacidad para adaptarse a diversos estilos musicales.</p>
+                <p>Gabriel también ha trabajado como productor, colaborando con artistas de diferentes géneros y contribuyendo al desarrollo de proyectos tanto en estudio como en vivo. Su visión musical y compromiso con la calidad lo han convertido en una figura respetada en la industria. Además de su trabajo en la música, Gabriel ha mostrado interés en la producción y en explorar nuevas facetas creativas dentro de su carrera.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Eruca Sativa. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/eruca_sativa" target="_blank">
+                    <img src="INSTAGRAM.webp" width="30px">
+                </a>
+                <a href="https://open.spotify.com/intl-es/artist/2RPNbhguRnI9uqahGYcUc6" target="_blank">
+                    <img src="spotify.png" width="30px">
+                </a>
+                <a href="https://www.youtube.com/erucasativa" target="_blank">
+                    <img src="YOUTUBE.png" width="30px">
+                </a>
+                <a href="https://www.facebook.com/erucasativa" target="_blank">
+                    <img src="facebook.png" width="30px">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para el menú desplegable en móviles -->
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

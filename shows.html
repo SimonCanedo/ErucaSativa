@@ -35,12 +35,29 @@
         </ul>
     </section>
 
+    <!-- Galería de Imágenes -->
+    <section class="gallery">
+        <h2>Galería de Imágenes</h2>
+        <div class="thumbnail-gallery">
+            <!-- Miniaturas con comportamiento para abrir imagen en grande en la misma ventana -->
+            <img src="ellos 3.jpg" alt="Miniatura 1" onclick="openModal('ellos 3.jpg')">
+            <img src="ellos 4.jpg" alt="Miniatura 2" onclick="openModal('ellos 4.jpg')">
+            <!-- Agrega más miniaturas si es necesario -->
+        </div>
+    </section>
+
+    <!-- Modal para ver imágenes a pantalla completa -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Eruca Sativa. Todos los derechos reservados.</p>
             <div class="social-icons">
-                <a href="https://www.instagram.com/eruca_sativa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <a href="https://www.instagram.com/eruca_sativa" target="_blank">
                     <img src="INSTAGRAM.webp" width="30px">
                 </a>
                 <a href="https://open.spotify.com/intl-es/artist/2RPNbhguRnI9uqahGYcUc6" target="_blank">
@@ -56,24 +73,23 @@
         </div>
     </footer>
 
-    <!-- Script para el menú desplegable en móviles -->
+    <!-- Script para el menú y modal de imágenes -->
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('nav-menu');
-            navMenu.classList.toggle('active'); // Alternar la clase 'active' para mostrar/ocultar el menú
-        
-    </script>
-<script>
-        function toggleMenu() {
-            const navMenu = document.getElementById('nav-menu');
-            navMenu.classList.toggle('active'); // Alternar la clase 'active' para mostrar/ocultar el menú
+            navMenu.classList.toggle('active');
+        }
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImage.src = imageSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
         }
     </script>
-	<script>
-    function toggleMenu() {
-        const navMenu = document.getElementById('nav-menu');
-        navMenu.classList.toggle('active'); // Alternar la clase 'active' para mostrar/ocultar el menú
-    }
-</script>
 </body>
 </html>
