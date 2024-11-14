@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Eruca Sativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="index.html">ERUCA SATIVA</a></div>
+        <!-- Botón del menú hamburguesa -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <!-- Menú de navegación -->
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="shows.html">Próximos Shows</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Galería en formato 2x2 -->
+    <section class="galeria">
+        <h2>Galería</h2>
+        
+        <!-- Fila 1: Lula y Brenda -->
+        <div class="row">
+            <!-- Slider de Lula -->
+            <div class="slider-container" id="slider-lula">
+                <h3>Lula</h3>
+                <div class="slider">
+                   <div class="slide">	
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto1.jpg">
+						<img src="lula 1.jpg" alt="Foto 1">
+					</picture> 
+					</div>
+				
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto2.jpg">
+					<img src="lula 2.jpg" alt="Foto 2">
+					</picture>
+					</div>
+				
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto3.jpg">
+                    <img src="lula 3.jpg" alt="Foto 3">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto4.jpg">
+                    <img src="lula 4.jpg" alt="Foto 4">
+						</picture>
+					</div>
+					
+					 <div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto5.jpg">
+                   <img src="lula 5.jpg" alt="Foto 5">
+					</picture>
+					</div>
+					
+					 <div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto6.jpg">
+                   <img src="lula 6.jpg" alt="Foto 6">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto7.jpg">
+                    <img src="lula 7.jpg" alt="Foto 7">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto8.jpg">
+                    <img src="lula 8.jpg" alt="Foto 8">
+					</picture>
+					</div>
+                </div>
+                <button class="prev" onclick="moveSlide('lula', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('lula', 1)">&#10095;</button>
+            </div>
+
+            <!-- Slider de Brenda -->
+            <div class="slider-container" id="slider-brenda">
+                <h3>Brenda</h3>
+                <div class="slider">
+				<div class="slide">	
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto1.1.jpg">
+						<img src="brenda 1.jpg" alt="Foto 1">
+					</picture> 
+					</div>
+				
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto2.1.jpg">
+					<img src="brenda 2.jpg" alt="Foto 2">
+					</picture>
+					</div>
+				
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto3.1.jpg">
+                    <img src="brenda 3.jpg" alt="Foto 3">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto4.1.jpg">
+                    <img src="brenda 4.jpg" alt="Foto 4">
+						</picture>
+					</div>
+					
+					 <div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto5.1.jpg">
+                   <img src="brenda 5.jpg" alt="Foto 5">
+					</picture>
+					</div>
+					
+					 <div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto6.1.jpg">
+                   <img src="brenda 6.jpg" alt="Foto 6">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto7.1.jpg">
+                    <img src="brenda 7.jpg" alt="Foto 7">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto8.1.jpg">
+                    <img src="brenda 8.jpg" alt="Foto 8">
+					</picture>
+					</div>
+                </div>
+                <button class="prev" onclick="moveSlide('brenda', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('brenda', 1)">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Fila 2: Gabi y Ellos -->
+        <div class="row">
+            <!-- Slider de Gabi -->
+            <div class="slider-container" id="slider-gabi">
+                <h3>Gabi</h3>
+                <div class="slider">
+                    <div class="slide">	
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto1.2.jpg">
+						<img src="gabi 1.jpg" alt="Foto 1">
+					</picture> 
+					</div>
+				
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto2.2.jpg">
+					<img src="gabi 2.jpg" alt="Foto 2">
+					</picture>
+					</div>
+				
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto3.2.jpg">
+                    <img src="gabi 3.jpg" alt="Foto 3">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto4.2.jpg">
+                    <img src="gabi 4.jpg" alt="Foto 4">
+						</picture>
+					</div>
+					
+					 <div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto5.2.jpg">
+                   <img src="gabi 5.jpg" alt="Foto 5">
+					</picture>
+					</div>
+					
+					 <div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto6.2.jpg">
+                   <img src="gabi 6.jpg" alt="Foto 6">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto7.2.jpg">
+                    <img src="gabi 7.jpg" alt="Foto 7">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto8.2.jpg">
+                    <img src="gabi 8.jpg" alt="Foto 8">
+					</picture>
+					</div>
+                </div>
+                <button class="prev" onclick="moveSlide('gabi', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('gabi', 1)">&#10095;</button>
+            </div>
+
+            <!-- Slider de Ellos -->
+            <div class="slider-container" id="slider-ellos">
+                <h3>Ellos</h3>
+                <div class="slider">
+<div class="slide">	
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto1.3.jpg">
+						<img src="ellos 1.jpg" alt="Foto 1">
+					</picture> 
+					</div>
+				
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto2.3.jpg">
+					<img src="ellos 2.jpg" alt="Foto 2">
+					</picture>
+					</div>
+				
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto3.3.jpg">
+                    <img src="ellos 3.jpg" alt="Foto 3">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto4.3.jpg">
+                    <img src="ellos 4.jpg" alt="Foto 4">
+						</picture>
+					</div>
+					
+					 <div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto5.3.jpg">
+                   <img src="ellos 5.jpg" alt="Foto 5">
+					</picture>
+					</div>
+					
+					 <div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto6.3.jpg">
+                   <img src="ellos 6.jpg" alt="Foto 6">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto7.3.jpg">
+                    <img src="ellos 7.jpg" alt="Foto 7">
+					</picture>
+					</div>
+					
+					<div class="slide">
+					<picture>
+                    <source media="(min-width:768px)" srcset="foto8.3.jpg">
+                    <img src="ellos 8.jpg" alt="Foto 8">
+					</picture>
+					</div>
+                </div>
+                <button class="prev" onclick="moveSlide('ellos', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('ellos', 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con redes sociales -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Eruca Sativa. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/eruca_sativa" target="_blank">
+                    <img src="INSTAGRAM.webp" width="30px">
+                </a>
+                <a href="https://open.spotify.com/intl-es/artist/2RPNbhguRnI9uqahGYcUc6" target="_blank">
+                    <img src="spotify.png" width="30px">
+                </a>
+                <a href="https://www.youtube.com/erucasativa" target="_blank">
+                    <img src="YOUTUBE.png" width="30px">
+                </a>
+                <a href="https://www.facebook.com/erucasativa" target="_blank">
+                    <img src="facebook.png" width="30px">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para el menú desplegable en móviles -->
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active'); // Alternar la clase 'active' para mostrar/ocultar el menú
+        }
+    </script>
+
+    <!-- Script para el control de los sliders -->
+    <script>
+        const sliders = {
+    lula: {
+        currentSlide: 0,
+        totalSlides: document.querySelectorAll('#slider-lula .slide').length
+    },
+    brenda: {
+        currentSlide: 0,
+        totalSlides: document.querySelectorAll('#slider-brenda .slide').length
+    },
+    gabi: {
+        currentSlide: 0,
+        totalSlides: document.querySelectorAll('#slider-gabi .slide').length
+    },
+    ellos: {
+        currentSlide: 0,
+        totalSlides: document.querySelectorAll('#slider-ellos .slide').length
+    }
+};
+
+function showSlide(sliderId, index) {
+    const slider = sliders[sliderId];
+    const sliderElement = document.querySelector(`#slider-${sliderId} .slider`);
+
+    if (index >= slider.totalSlides) {
+        slider.currentSlide = 0;  // Regresa al primer slide si excede el total
+    } else if (index < 0) {
+        slider.currentSlide = slider.totalSlides - 1;  // Va al último slide si el índice es negativo
+    } else {
+        slider.currentSlide = index;
+    }
+
+    const offset = -slider.currentSlide * 100;
+    sliderElement.style.transform = `translateX(${offset}%)`;
+}
+
+function moveSlide(sliderId, direction) {
+    const slider = sliders[sliderId];
+    showSlide(sliderId, slider.currentSlide + direction);
+}
+
+// Auto-slide para que el slider se mueva automáticamente cada 3 segundos
+function autoSlide(sliderId) {
+    setInterval(() => {
+        moveSlide(sliderId, 1); // Mueve a la siguiente imagen automáticamente
+    }, 3500); // Cambia cada 3 segundos
+}
+
+// Llamar a autoSlide para cada slider
+autoSlide('lula');
+autoSlide('brenda');
+autoSlide('gabi');
+autoSlide('ellos');
+    </script>
+<script>
+    window.onload = function() {
+        const header = document.querySelector('header');
+        const galeria = document.querySelector('.galeria');
+        galeria.style.marginTop = header.offsetHeight + 'px';
+    };
+</script>
+</body>
+</html>
