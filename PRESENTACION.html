@@ -3,39 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentación de Eruca Sativa</title>
+    <title>Presentación Eruca Sativa</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Oswald', sans-serif;
             background-color: #000;
-            color: white;
+            color: #fff;
             margin: 0;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
         }
+
         .slide {
             display: none;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             width: 100%;
-            min-height: 100vh;
+            height: 100vh;
             text-align: center;
             padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: fadeIn 1s;
         }
+
         .slide.active {
             display: flex;
         }
-        .controls {
-            position: fixed;
-            bottom: 20px;
-            display: flex;
-            gap: 20px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
+        h1, h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
         .button {
             background-color: #583B93;
             color: white;
@@ -44,64 +61,71 @@
             cursor: pointer;
             font-size: 18px;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
+
         .button:hover {
             background-color: #7649b8;
         }
-        .slide1 h1 {
-            font-size: 48px;
-            color: #fff;
-            margin-bottom: 20px;
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
         }
-        .slide1 img {
-            width: 60%;
-            height: auto;
+
+        .slide img {
+            max-width: 80%;
+            max-height: 70vh;
             border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
         }
-        .photo-box {
-            width: 80%;
+
+        .grid {
             display: grid;
-            gap: 15px;
-            text-align: center;
+            gap: 20px;
+            max-width: 80%;
+            margin: 0 auto;
         }
-        .photo-box-two {
+
+        .grid-2 {
             grid-template-columns: 1fr 1fr;
         }
-        .photo-box-one {
+
+        .grid-1 {
             grid-template-columns: 1fr;
         }
+
+        .grid-5 {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
         .photo-item img {
             width: 100%;
             border-radius: 8px;
             margin-bottom: 5px;
         }
+
         @media (max-width: 768px) {
-            .photo-box {
-                width: 95%;
+            h1, h2 {
+                font-size: 2rem;
             }
-            .photo-box-two {
+
+            .grid {
+                max-width: 90%;
+            }
+
+            .grid-2 {
                 grid-template-columns: 1fr;
             }
-        }
-        .slide3-content {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .slide3 img {
-            width: 100%;
-            max-width: 40%;
-            border-radius: 8px;
-        }
-        .slide3 p {
-            width: 100%;
-            max-width: 50%;
-            text-align: left;
-        }
-        .slide5 h2 {
-            font-size: 36px;
-            color: #fff;
+
+            .grid-5 {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
         }
     </style>
 </head>
@@ -109,84 +133,88 @@
 
     <!-- Diapositiva 1 -->
     <div class="slide slide1 active" id="slide1">
-        <h1>Eruca Sativa</h1>
+        <h1>Bienvenidos a Eruca Sativa</h1>
         <img src="ellos 5.jpg" alt="Imagen principal">
     </div>
 
-    <!-- Diapositiva 2: Página de Inicio -->
+    <!-- Diapositiva 2: Nueva Diapositiva con 5 fotos -->
     <div class="slide" id="slide2">
-        <h2>Página de Inicio</h2>
-        <div class="photo-box photo-box-two">
+        <h2>Momentos Destacados</h2>
+        <div class="grid grid-5">
             <div class="photo-item">
-                <img src="captura 1.jpg" alt="Foto Página Inicio 1">
+                <img src="Captura de pantalla 2024-12-12 a la(s) 2.32.15 p. m..png" alt="Foto Destacada 1">
             </div>
             <div class="photo-item">
-                <img src="captura 2.jpg" alt="Foto Página Inicio 2">
+                <img src="Captura de pantalla 2024-12-12 a la(s) 2.32.10 p. m..png" alt="Foto Destacada 2">
+            </div>
+            <div class="photo-item">
+                <img src="Captura de pantalla 2024-12-12 a la(s) 2.32.06 p. m..png" alt="Foto Destacada 3">
+            </div>
+            <div class="photo-item">
+                <img src="Captura de pantalla 2024-12-12 a la(s) 2.32.01 p. m..png" alt="Foto Destacada 4">
+            </div>
+            <div class="photo-item">
+                <img src="Captura de pantalla 2024-12-12 a la(s) 2.31.51 p. m..png" alt="Foto Destacada 5">
             </div>
         </div>
     </div>
 
-    <!-- Diapositiva 3: Galería -->
+    <!-- Diapositiva 3: Página de Inicio -->
     <div class="slide" id="slide3">
-        <h2>Galería</h2>
-        <div class="photo-box photo-box-two">
-            <div class="photo-item">
-                <img src="captura 4.jpg" alt="Foto Galería 1">
-            </div>
-            <div class="photo-item">
-                <img src="captura 5.jpg" alt="Foto Galería 2">
-            </div>
+        <h2>Página de Inicio</h2>
+        <div class="grid grid-2">
+            <img src="captura 1.jpg" alt="Inicio 1">
+            <img src="captura 2.jpg" alt="Inicio 2">
         </div>
     </div>
 
-    <!-- Diapositiva 4: Próximos Shows -->
+    <!-- Diapositiva 4: Galería -->
     <div class="slide" id="slide4">
-        <h2>Próximos Shows</h2>
-        <div class="photo-box photo-box-one">
-            <div class="photo-item">
-                <img src="captura 6.jpg" alt="Foto Próximos Shows">
-            </div>
+        <h2>Galería</h2>
+        <div class="grid grid-2">
+            <img src="captura 4.jpg" alt="Galería 1">
+            <img src="captura 5.jpg" alt="Galería 2">
         </div>
     </div>
 
-    <!-- Diapositiva 5: Quiénes Son -->
+    <!-- Diapositiva 5: Próximos Shows -->
     <div class="slide" id="slide5">
-        <h2>Quiénes Son</h2>
-        <div class="photo-box photo-box-two">
-            <div class="photo-item">
-                <img src="captura 7.jpg" alt="Foto Quiénes Son 1">
-            </div>
-            <div class="photo-item">
-                <img src="captura 8.jpg" alt="Foto Quiénes Son 2">
-            </div>
+        <h2>Próximos Shows</h2>
+        <div class="grid grid-1">
+            <img src="captura 6.jpg" alt="Shows">
         </div>
     </div>
 
-    <!-- Diapositiva 6: Contacto -->
+    <!-- Diapositiva 6: Quiénes Somos -->
     <div class="slide" id="slide6">
+        <h2>Quiénes Somos</h2>
+        <div class="grid grid-2">
+            <img src="captura 7.jpg" alt="Quienes 1">
+            <img src="captura 8.jpg" alt="Quienes 2">
+        </div>
+    </div>
+
+    <!-- Diapositiva 7: Contacto -->
+    <div class="slide" id="slide7">
         <h2>Contacto</h2>
-        <div class="photo-box photo-box-one">
-            <div class="photo-item">
-                <img src="captura 9.jpg" alt="Foto Contacto">
-            </div>
+        <div class="grid grid-1">
+            <img src="captura 9.jpg" alt="Contacto">
         </div>
     </div>
 
-    <!-- Diapositiva 7: Propósito de la página -->
-    <div class="slide slide3" id="slide7">
-        <div class="slide3-content">
-            <img src="foto1.3.jpg" alt="Imagen sobre la página">
-            <p>Esta página se creó para compartir la pasión de Eruca Sativa y conectar con los fans a través de un espacio único y lleno de energía.</p>
-        </div>
+    <!-- Diapositiva 8: Sobre esta Página -->
+    <div class="slide" id="slide8">
+        <h2>Sobre esta Página</h2>
+        <p>Esta página es un tributo al legado de Eruca Sativa, un espacio para conectar a los fans y compartir experiencias inolvidables.</p>
     </div>
 
-    <!-- Diapositiva 8: Agradecimientos -->
-    <div class="slide slide5" id="slide8">
-        <h2>Gracias por visitar</h2>
-        <p>Esperamos que disfrutes de la experiencia de Eruca Sativa. ¡Gracias por tu apoyo!</p>
+    <!-- Diapositiva 9: Agradecimientos -->
+    <div class="slide" id="slide9">
+        <h2>¡Gracias por tu visita!</h2>
+        <p>Esperamos verte pronto en los próximos shows.</p>
     </div>
 
-    <!-- Controles de navegación -->
+    <!-- Controles -->
     <div class="controls">
         <button class="button" onclick="prevSlide()">Anterior</button>
         <button class="button" onclick="nextSlide()">Siguiente</button>
@@ -194,7 +222,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 8;
+        const totalSlides = 9;
 
         function showSlide(n) {
             document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
