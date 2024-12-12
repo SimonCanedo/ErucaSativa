@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Eruca Sativa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: fadeIn 1s;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1, h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .button {
+            background-color: #583B93;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #7649b8;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .slide img {
+            max-width: 80%;
+            max-height: 70vh;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-1 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 2rem;
+            }
+
+            .grid {
+                max-width: 90%;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Diapositiva 1 -->
+    <div class="slide active" id="slide1">
+        <h1>Bienvenidos a Eruca Sativa</h1>
+        <img src="ellos 5.jpg" alt="Imagen principal">
+    </div>
+
+    <!-- Diapositiva 2 -->
+    <div class="slide" id="slide2">
+        <h2>Página de Inicio</h2>
+        <div class="grid grid-2">
+            <img src="captura 1.jpg" alt="Inicio 1">
+            <img src="captura 2.jpg" alt="Inicio 2">
+        </div>
+    </div>
+
+    <!-- Diapositiva 3 -->
+    <div class="slide" id="slide3">
+        <h2>Galería</h2>
+        <div class="grid grid-2">
+            <img src="captura 4.jpg" alt="Galería 1">
+            <img src="captura 5.jpg" alt="Galería 2">
+        </div>
+    </div>
+
+    <!-- Diapositiva 4 -->
+    <div class="slide" id="slide4">
+        <h2>Próximos Shows</h2>
+        <div class="grid grid-1">
+            <img src="captura 6.jpg" alt="Shows">
+        </div>
+    </div>
+
+    <!-- Diapositiva 5 -->
+    <div class="slide" id="slide5">
+        <h2>Quiénes Somos</h2>
+        <div class="grid grid-2">
+            <img src="captura 7.jpg" alt="Quienes 1">
+            <img src="captura 8.jpg" alt="Quienes 2">
+        </div>
+    </div>
+
+    <!-- Diapositiva 6 -->
+    <div class="slide" id="slide6">
+        <h2>Contacto</h2>
+        <div class="grid grid-1">
+            <img src="captura 9.jpg" alt="Contacto">
+        </div>
+    </div>
+
+    <!-- Diapositiva 7 -->
+    <div class="slide" id="slide7">
+        <h2>Sobre esta Página</h2>
+        <p>Esta página es un tributo al legado de Eruca Sativa, un espacio para conectar a los fans y compartir experiencias inolvidables.</p>
+    </div>
+
+    <!-- Diapositiva 8 -->
+    <div class="slide" id="slide8">
+        <h2>¡Gracias por tu visita!</h2>
+        <p>Esperamos verte pronto en los próximos shows.</p>
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+        <button class="button" onclick="prevSlide()">Anterior</button>
+        <button class="button" onclick="nextSlide()">Siguiente</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 8;
+
+        function showSlide(n) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide % totalSlides) + 1;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 2 + totalSlides) % totalSlides + 1;
+            showSlide(currentSlide);
+        }
+    </script>
+
+</body>
+</html>
